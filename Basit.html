@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Fee Account Report - AbdulBasit O.</title>
+    <style>
+        :root {
+            --navy: #1a2a4b;
+            --gold: #c5a059;
+            --light-bg: #f8f9fa;
+            --accent-red: #b22222;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .report-container {
+            width: 800px;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--navy);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .school-name {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: black;
+            text-transform: uppercase;
+        }
+        .report-title {
+            background: var(--navy);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 20px;
+            margin: 20px 0;
+            letter-spacing: 1px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        section {
+            margin-bottom: 25px;
+        }
+        .section-header {
+            background: var(--navy);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .section-content {
+            padding: 15px;
+            border: 1px solid #eee;
+            border-top: none;
+        }
+        .fee-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        .total-due {
+            background: #fdf2d9;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th {
+            background: var(--navy);
+            color: white;
+            text-align: left;
+            padding: 10px;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .summary-box {
+            border-top: 2px solid black;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+        .outstanding {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--accent-red);
+            padding: 15px;
+        }
+        .notes {
+            background: #eeeeee;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        footer {
+            margin-top: 30px;
+            border-top: 2px solid #0056b3;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="report-container">
+    <header>
+        <div class="school-name">TAQWA SCHOOLS</div>
+    </header>
+
+    <div class="report-title">SCHOOL FEE ACCOUNT REPORT</div>
+
+    <div class="info-grid">
+        <div>Report Date: 25 March 2026</div>
+        <div style="text-align: right;">Parent/Guardian: Mr Okikiola</div>
+        <div>Student: ABDULBASIT O.</div>
+    </div>
+
+    <section>
+        <div class="section-header">I. INITIAL PROPOSED PAYMENT PLAN SUMMARY</div>
+        <div class="section-content">
+            <div class="fee-row">
+                <span>Outstanding First Term balance:</span>
+                <span>₦1,242,854.00</span>
+            </div>
+            <div class="fee-row">
+                <span>Second Term fee:</span>
+                <span>₦726,645.00</span>
+            </div>
+            <div class="fee-row total-due">
+                <span>TOTAL DUE (PROPOSED):</span>
+                <span>₦1,969,499.00</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-header">II. PAYMENT RECEIVED HISTORY (OCT 2025 - FEB 2026)</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>DATE</th>
+                    <th>PAYMENT DESCRIPTION</th>
+                    <th style="text-align: right;">AMOUNT (₦)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Oct 7, 2025</td>
+                    <td>Payment Received</td>
+                    <td style="text-align: right;">500,000.00</td>
+                </tr>
+                <tr>
+                    <td>Oct 20, 2025</td>
+                    <td>Payment Received</td>
+                    <td style="text-align: right;">300,000.00</td>
+                </tr>
+                <tr>
+                    <td>Feb 4, 2026</td>
+                    <td>Payment Received</td>
+                    <td style="text-align: right;">400,000.00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr style="background: #f1f1f1; font-weight: bold;">
+                    <td colspan="2">TOTAL PAYMENTS MADE:</td>
+                    <td style="text-align: right;">₦1,200,000.00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <div class="section-header">III. CURRENT ACCOUNT STANDING</div>
+        <div class="summary-box">
+            <div class="fee-row">
+                <span>Current Proposed Fees:</span>
+                <span>₦1,969,499.00</span>
+            </div>
+            <div class="fee-row">
+                <span>[-] Total Payments Received:</span>
+                <span>₦1,200,000.00</span>
+            </div>
+            <div class="outstanding">
+                CURRENT OUTSTANDING BALANCE: ₦769,499.00
+            </div>
+        </div>
+    </section>
+
+    <div class="notes">
+        <strong>CRITICAL NOTES:</strong><br>
+        The remainder of ₦769,499.00 must be cleared before the commencement of the end of term exam.
+    </div>
+
+    <footer>
+        7-11, Taqwa Crescent, Off Iju Road, Ifako, Agege, Lagos State.<br>
+        Tel: 0802 440 2276, 0803 591 4256, 0802 300 8758<br>
+        E-mail: info@taqwaschools.org | Website: www.taqwaschools.org
+    </footer>
+</div>
+
+</body>
+</html>
