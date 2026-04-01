@@ -13,76 +13,80 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #e0e0e0;
+            background-color: #f0f2f5;
             display: flex;
             justify-content: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
         .report-container {
             width: 800px;
             background: white;
-            border: 1px solid #ccc;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             padding: 40px;
+            border-radius: 4px;
         }
         header {
             text-align: center;
             border-bottom: 3px solid var(--navy);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
         }
         .school-name {
-            font-size: 28px;
-            font-weight: bold;
+            font-size: 32px;
+            font-weight: 800;
             letter-spacing: 2px;
-            color: black;
+            color: #000;
             text-transform: uppercase;
         }
         .report-title {
             background: var(--navy);
             color: white;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
             font-weight: bold;
-            border-radius: 20px;
-            margin: 20px 0;
-            letter-spacing: 1px;
+            border-radius: 50px;
+            margin: 25px 0;
+            font-size: 18px;
+            letter-spacing: 1.5px;
         }
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            margin-bottom: 30px;
-            font-weight: bold;
+            margin-bottom: 35px;
+            font-size: 15px;
         }
-        section {
-            margin-bottom: 25px;
-        }
+        .info-grid div { margin-bottom: 5px; }
+        
+        section { margin-bottom: 30px; }
+        
         .section-header {
             background: var(--navy);
             color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
+            padding: 10px 18px;
+            border-radius: 4px;
             font-size: 14px;
+            font-weight: bold;
             text-transform: uppercase;
         }
         .section-content {
-            padding: 15px;
+            padding: 20px;
             border: 1px solid #eee;
             border-top: none;
         }
         .fee-row {
             display: flex;
             justify-content: space-between;
-            padding: 5px 0;
+            padding: 8px 0;
+            font-size: 15px;
         }
         .total-due {
-            background: #fdf2d9;
+            background: #fff9e6;
             font-weight: bold;
-            padding: 10px;
+            padding: 12px;
             border-radius: 4px;
-            margin-top: 10px;
+            margin-top: 15px;
+            border-left: 4px solid var(--gold);
         }
         table {
             width: 100%;
@@ -90,41 +94,72 @@
             margin-top: 10px;
         }
         th {
-            background: var(--navy);
-            color: white;
+            background: #f1f4f8;
+            color: var(--navy);
             text-align: left;
-            padding: 10px;
+            padding: 12px;
+            border-bottom: 2px solid var(--navy);
+            font-size: 13px;
         }
         td {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
         }
         .summary-box {
-            border-top: 2px solid black;
+            border-top: 2px solid #333;
             margin-top: 20px;
-            padding-top: 10px;
+            padding-top: 15px;
         }
         .outstanding {
             text-align: center;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
             color: var(--accent-red);
-            padding: 15px;
+            padding: 20px;
+            background: #fff0f0;
+            border-radius: 8px;
+            margin: 15px 0;
         }
         .notes {
-            background: #eeeeee;
-            padding: 15px;
+            background: #f8f9fa;
+            padding: 20px;
             border-radius: 8px;
-            font-size: 13px;
-            line-height: 1.5;
+            font-size: 14px;
+            line-height: 1.6;
+            border-left: 4px solid #ccc;
         }
+        
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .btn-report {
+            display: inline-block;
+            background-color: var(--navy);
+            color: white !important;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-report:hover {
+            background-color: var(--gold);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
         footer {
-            margin-top: 30px;
-            border-top: 2px solid #0056b3;
-            padding-top: 10px;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
             text-align: center;
             font-size: 12px;
-            color: #555;
+            color: #666;
+            line-height: 1.8;
         }
     </style>
 </head>
@@ -138,9 +173,9 @@
     <div class="report-title">SCHOOL FEE ACCOUNT REPORT</div>
 
     <div class="info-grid">
-        <div>Report Date: 25 March 2026</div>
-        <div style="text-align: right;">Parent/Guardian: Mr Okikiola</div>
-        <div>Student: ABDULBASIT O.</div>
+        <div><strong>Report Date:</strong> 01 April 2026</div>
+        <div style="text-align: right;"><strong>Parent/Guardian:</strong> Mr Okikiola</div>
+        <div><strong>Student:</strong> ABDULBASIT O.</div>
     </div>
 
     <section>
@@ -162,7 +197,7 @@
     </section>
 
     <section>
-        <div class="section-header">II. PAYMENT RECEIVED HISTORY (OCT 2025 - FEB 2026)</div>
+        <div class="section-header">II. PAYMENT RECEIVED HISTORY</div>
         <table>
             <thead>
                 <tr>
@@ -187,11 +222,16 @@
                     <td>Payment Received</td>
                     <td style="text-align: right;">400,000.00</td>
                 </tr>
+                <tr>
+                    <td>Mar 31, 2026</td>
+                    <td>Payment Received</td>
+                    <td style="text-align: right;">500,000.00</td>
+                </tr>
             </tbody>
             <tfoot>
-                <tr style="background: #f1f1f1; font-weight: bold;">
-                    <td colspan="2">TOTAL PAYMENTS MADE:</td>
-                    <td style="text-align: right;">₦1,200,000.00</td>
+                <tr style="background: #f8f9fa; font-weight: bold;">
+                    <td colspan="2" style="border-top: 2px solid var(--navy);">TOTAL PAYMENTS MADE:</td>
+                    <td style="text-align: right; border-top: 2px solid var(--navy);">₦1,700,000.00</td>
                 </tr>
             </tfoot>
         </table>
@@ -206,23 +246,23 @@
             </div>
             <div class="fee-row">
                 <span>[-] Total Payments Received:</span>
-                <span>₦1,200,000.00</span>
+                <span>₦1,700,000.00</span>
             </div>
             <div class="outstanding">
-                CURRENT OUTSTANDING BALANCE: ₦769,499.00
+                CURRENT OUTSTANDING BALANCE: ₦269,499.00
             </div>
         </div>
     </section>
 
     <div class="notes">
         <strong>CRITICAL NOTES:</strong><br>
-        The remainder of ₦769,499.00 must be cleared before the commencement of the end of term exam.
+        The remainder of <strong>₦269,499.00</strong> must be cleared before the commencement of the end of term exam.
     </div>
 
     <div class="button-container">
-        <a href="index.html" class="btn-report">Click here to view Ghalib's report.</a>
+        <a href="ghalib_report.html" class="btn-report">Click here to view Ghalib's report</a>
     </div>
-    
+
     <footer>
         7-11, Taqwa Crescent, Off Iju Road, Ifako, Agege, Lagos State.<br>
         Tel: 0802 440 2276, 0803 591 4256, 0802 300 8758<br>
